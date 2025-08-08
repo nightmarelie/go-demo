@@ -75,10 +75,10 @@ go run main.go
 ### Method 2: Build and run
 ```bash
 # Build the application
-go build -o app main.go
+go build
 
 # Run the built binary
-./app
+./app-1
 ```
 
 ### Method 3: Install globally
