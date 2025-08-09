@@ -6,14 +6,7 @@ import (
 )
 
 func main() {
-	userHeight := 1.78
-	userKg := 85.5
-
-	fmt.Println("Calculate your IMT")
-	fmt.Println("Enter your height (m):")
-	fmt.Scan(&userHeight)
-	fmt.Println("Enter your weight (kg):")
-	fmt.Scan(&userKg)
+	userHeight, userKg := getUserInput()
 
 	imt := calculateIMT(userHeight, userKg)
 	outputResult(imt)
@@ -29,4 +22,16 @@ func calculateIMT(height float64, weight float64) float64 {
 	const IMT_POWER float64 = 2
 
 	return weight / math.Pow(height, IMT_POWER)
+}
+
+func getUserInput() (float64, float64) {
+	var userHeight float64
+	var userKg float64
+
+	fmt.Println("Enter your height (m):")
+	fmt.Scan(&userHeight)
+	fmt.Println("Enter your weight (kg):")
+	fmt.Scan(&userKg)
+
+	return userHeight, userKg
 }
