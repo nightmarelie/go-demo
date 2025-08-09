@@ -18,5 +18,7 @@ func main() {
 
 	imt := userKg / math.Pow(userHeight, IMP_POWER)
 
-	fmt.Printf("Your IMT is: %f\n", imt)
+	result := fmt.Sprintf("Your IMT is: %f\n", imt)
+
+	fmt.Println(result)
 }
