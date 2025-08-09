@@ -18,20 +18,20 @@ func outputResult(imt float64) {
 	fmt.Println(result)
 }
 
-func calculateIMT(height float64, weight float64) float64 {
+func calculateIMT(height float64, weight float64) (result float64) {
 	const IMT_POWER float64 = 2
 
-	return weight / math.Pow(height, IMT_POWER)
+	result = weight / math.Pow(height, IMT_POWER)
+
+	return
 }
 
-func getUserInput() (float64, float64) {
-	var userHeight float64
-	var userKg float64
+func getUserInput() (userHeight float64, userKg float64) {
 
 	fmt.Println("Enter your height (m):")
 	fmt.Scan(&userHeight)
 	fmt.Println("Enter your weight (kg):")
 	fmt.Scan(&userKg)
 
-	return userHeight, userKg
+	return
 }
