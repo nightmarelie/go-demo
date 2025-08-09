@@ -11,12 +11,12 @@ func main() {
 	userKg := 85.5
 
 	fmt.Println("Calculate your IMT")
-	fmt.Println("Enter your height:")
+	fmt.Println("Enter your height (m):")
 	fmt.Scan(&userHeight)
-	fmt.Println("Enter your weight:")
+	fmt.Println("Enter your weight (kg):")
 	fmt.Scan(&userKg)
 
 	imt := userKg / math.Pow(userHeight, IMP_POWER)
 
-	fmt.Println("Your IMT is:", imt)
+	fmt.Printf("Your IMT is: %f\n", imt)
 }
