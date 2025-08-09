@@ -1,6 +1,6 @@
-# Go Demo Application
+# Go BMI (IMT) Calculator
 
-A simple Go application that prints "Hello, World!" to demonstrate basic Go programming concepts.
+A simple interactive Go program that calculates Body Mass Index (BMI, also called IMT) from user input. It prompts for height (in meters) and weight (in kilograms) and prints the computed BMI.
 
 ## Prerequisites
 
@@ -69,25 +69,36 @@ go 1.24.6
 
 ### Method 1: Direct execution
 ```bash
-go run main.go
+go run .
+```
+
+Example interactive session:
+
+```text
+$ go run .
+Enter your height:
+1.78
+Enter your weight:
+85.5
+27.0...
 ```
 
 ### Method 2: Build and run
 ```bash
-# Build the application
-go build
+# Build the application (outputs a binary named "go-demo" by default)
+go build -o go-demo
 
 # Run the built binary
-./app-1
+./go-demo
 ```
 
-### Method 3: Install globally
+### Method 3: Install locally (GOBIN/GOPATH)
 ```bash
-# Install the application globally
-go install
+# Install to $(go env GOPATH)/bin (ensure it's on your PATH)
+go install .
 
-# Run from anywhere (if your GOPATH/bin is in your PATH)
-app-1
+# Then run (path may vary by setup)
+go-demo
 ```
 
 ## Project Structure
@@ -100,6 +111,12 @@ go-demo/
 ```
 
 ## Development
+
+### Behavior and Assumptions
+
+- Expects metric units: height in meters, weight in kilograms
+- Reads from standard input; no flags/arguments are currently supported
+- Outputs the raw floating-point BMI value using default formatting
 
 ### Adding Dependencies
 
@@ -149,16 +166,14 @@ golangci-lint run
    - Check that your `go.mod` file exists and is properly formatted
 
 3. **Permission denied when running built binary**
-   - Make the binary executable: `chmod +x app`
+   - Make the binary executable: `chmod +x go-demo`
 
 ## Next Steps
 
-- Add more functionality to `main.go`
-- Create additional packages in subdirectories
+- Add input validation and friendly error messages
+- Format BMI output (e.g., to two decimals) and add categorization
+- Optional: add CLI flags for non-interactive usage (e.g., `--height`, `--weight`)
 - Add tests in `*_test.go` files
-- Set up a CI/CD pipeline
-- Add configuration management
-- Implement logging and error handling
 
 ## Resources
 
