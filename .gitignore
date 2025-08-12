@@ -27,3 +27,5 @@ coverage.out
 # IntelliJ IDEA / GoLand
 .idea/
 *.iml
+
+todo
