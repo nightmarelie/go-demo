@@ -1,3 +1,13 @@
+# Usfull links
+- [Learn Go with Tests](https://quii.gitbook.io/learn-go-with...)  
+  A practical guide to learning Go through test-driven development.
+
+- [Learn X in Y Minutes: Go](https://learnxinyminutes.com/docs/go/)  
+  Great for quickly learning Go syntax.
+
+- [Effective Go](https://go.dev/doc/effective_go)  
+  A must-read for writing idiomatic Go code.
+
 # Tiny TODO CLI (Go)
 
 A minimal command-line task manager written in Go. Tasks are stored as JSON in your home directory at `~/.todo.json`.
